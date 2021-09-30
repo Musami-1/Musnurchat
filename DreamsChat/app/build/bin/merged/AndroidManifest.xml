@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dreams.chat"
+    android:versionCode="9"
+    android:versionName="1.8" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="com.dreams.chat.BaseApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="whateverString"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_logo_"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.dreams.chat.activities.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.dreams.chat.activities.ChatActivity"
+            android:parentActivityName="com.dreams.chat.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity android:name="com.dreams.chat.activities.ImageViewerActivity" />
+
+        <service
+            android:name="com.dreams.chat.services.FirebaseChatService"
+            android:enabled="true" />
+        <service android:name="com.dreams.chat.services.MyFirebaseMessagingService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.dreams.chat.receivers.ConnectivityReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <provider
+            android:name="com.dreams.chat.utils.MyFileProvider"
+            android:authorities="@string/authority"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.dreams.chat.activities.ContactViewerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.dreams.chat.activities.ChatDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.dreams.chat.activities.SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.dreams.chat.activities.CallScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dreams.chat.activities.IncomingCallScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dreams.chat.activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.dreams.chat.services.FetchMyUsersService"
+            android:exported="false" />
+        <service
+            android:name="com.dreams.chat.services.SinchService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.dreams.chat.activities.ChooseSignInActivity"
+            android:label="@string/title_activity_choose_sign_in"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.dreams.chat.activities.ContactActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.dreams.chat.activities.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="com.dreams.chat.status.glideProgressBar.OkHttpProgressGlideModule"
+            android:value="GlideModule" />
+
+        <activity
+            android:name="com.dreams.chat.activities.StatusStoriesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenVideoTheme" />
+        <activity
+            android:name="com.dreams.chat.activities.CallListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" />
+        <activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <provider
+            android:name="com.kbeanie.multipicker.utils.AMPFileProvider"
+            android:authorities="com.dreams.chat.multipicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.dreams.chat.com.squareup.picasso"
+            android:exported="false" />
+
+        <activity
+            android:name="com.karumi.dexter.DexterActivity"
+            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+
+        <provider
+            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+            android:authorities="com.dreams.chat.crashlyticsinitprovider"
+            android:exported="false"
+            android:initOrder="90" />
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.dreams.chat.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

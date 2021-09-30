@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.adrielcafe:ffmpeg-android-java:2a627f6ecd@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ffmpeg-android-java-2a627f6ecd.aar/6d00226297653b0cd31339ae4fef38e9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ffmpeg-android-java-2a627f6ecd.aar/6d00226297653b0cd31339ae4fef38e9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ffmpeg-android-java-2a627f6ecd.aar/bdcc175a2a18ab61cfb232b54b39ed82/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ffmpeg-android-java-2a627f6ecd.aar/bdcc175a2a18ab61cfb232b54b39ed82/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ffmpeg-android-java-2a627f6ecd.aar/bdcc175a2a18ab61cfb232b54b39ed82/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.adrielcafe/ffmpeg-android-java/2a627f6ecd/d356bd95ca75b552117c19e80cb013870a761173/ffmpeg-android-java-2a627f6ecd-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

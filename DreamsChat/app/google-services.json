@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "718501306629",
+    "project_id": "musnurchat-65e3d",
+    "storage_bucket": "musnurchat-65e3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718501306629:android:c8c16d535747fea9a2576c",
+        "android_client_info": {
+          "package_name": "com.w.musnurchat.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718501306629-2r45i7p92j1c7nlqhd1j3gvptosfccec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6eTFLIr65A0NxX22yUY0muKu5BXIArjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718501306629-2r45i7p92j1c7nlqhd1j3gvptosfccec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

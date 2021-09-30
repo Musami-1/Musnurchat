@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>DreamsChat - Documentation</title>
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+	</head>
+
+	<body data-spy="scroll" data-target=".nav-sidebar" data-offset="100">
+		<header>
+			<nav class="navbar" id="home">
+				<div class="container">
+					<div class="navbar-left">
+						<a class="navbar-brand" href="index.html">
+							<img class="logo-dark" src="assets/img/logo.png" alt="logo">
+						</a>
+					</div>
+					<a class="btn btn-round btn-orange" href="#introduction">Getting Started</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="page-wrapper">
+			<div class="page-content">
+
+				<!-- Header -->
+				<div class="page-header">
+					<div class="container">
+						<h1>Documentation</h1>
+						<p class="lead"><strong>DreamsChat</strong> - WhatsApp Clone - Native Android App with Firebase & Sinch for Call</p>
+					</div>
+				</div>
+				<!-- Header -->
+
+				<!-- Main Content -->
+				<main class="main-content">
+					<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-xl-3">
+							<aside class="sidebar sidebar-sticky">
+								<div class="sidebar-body">
+									<ul class="nav nav-sidebar">
+										<li class="nav-item">
+											<a class="nav-link" href="#introduction">Introduction</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#get-started">Mobile App Installation Guide</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#requirements">System Requirements</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#change_logo">Change log</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#support">Support</a>
+										</li>
+									</ul>
+								</div>
+							</aside>
+						</div>
+						
+						<div class="col-md-8 col-xl-9">
+							<h3 id="introduction">Introduction</h3>
+							<ul>
+								<li>Created on: 9 Feb 2019</li>
+								<li>Developed by: <a target="_blank" href="https://dreamguys.co.in/">DreamGuy's Technologies</a></li>
+								<li>Support via email: <a href="mailto:admin@dreamguys.co.in">business@dreamguys.co.in</a></li>
+								<li>Support via ThemeForest: <a target="_blank" href="http://themeforest.net/user/dreamguys">Take me there</a></li>
+							</ul>
+							<p><strong>DreamChat</strong> - WhatzClone an application that allow to have a Firebase chat with friends (Like WhatsApp). You can send and share (images or videos or audio or pdf) ...etc. there is a database local to save your messages , so when user lost the internet connection he can write a message ,the message will be saved on database local and once the other user come online the app will send your message directly .Also you can delete conversation or messages .Feel free and enjoy the new emoticons .For the Backend side you can control your app as you want even you can control and settings up the Admob from the dashboard.</p>
+							<hr class="hr-dash my-7">
+							
+							<h3 id="get-started">Mobile App Installation Guide</h3>
+
+							<p><h4><strong>Project Configuration</strong></h4></p>
+							<p>Adding Firebase to Android App, Follow the below linl:</p>
+							<p><a href="https://www.geeksforgeeks.org/adding-firebase-to-android-app/" target="_blank">https://www.geeksforgeeks.org/adding-firebase-to-android-app/</a></p>
+							<p><strong>Firebase Login</strong> – In this we have used firebase auth for login using mobile number with OTP verification. </p>
+							<p><img alt="" src="assets/img/3.jpg" class="img-fluid"></p>
+
+							<p><h4><strong>Firebase Chat Service </strong></h4></p>
+							<ul>
+								<li>In this file you can create the database for firebase and creating user tables, chat tables and the call tables.</li>
+								<li>Notifications channels and Services has been created in this classes.</li>
+							</ul>
+							<p><img alt="" src="assets/img/02.jpg" class="img-fluid"></p>
+							<p><strong>Model Classes</strong> – Each tables have separate model clases.</p>
+
+							<p><h4><strong>Chat module</strong></h4></p>
+							<p>In Chat module, here you can change the code according to your needs. So if you change any values here, total flow will get damaged. So be careful in working in that.</p>
+							<p><img alt="" src="assets/img/03.jpg" class="img-fluid"></p>
+							
+							<p><h4><strong>Sinch</strong></h4></p>
+							<p>To integrate Sinch account in your application, follow the below link:</p>
+							<a href="https://www.sinch.com/docs/voice/android/" target="_blank">https://www.sinch.com/docs/voice/android/</a>
+							<p>To make any changes in code, Please refer screenshot below.</p>
+							<p><img alt="" src="assets/img/04.jpg" class="img-fluid"></p>
+
+							<p><h4><strong>Change Color</strong></h4></p>
+							<p>To change the color of the app, select res -> values -> colors. From this file, you can change the color of the app. If you change the color here, the whole application color will be changed. </p>
+							<img alt="" src="assets/img/4.png" class="img-fluid">
+							
+							<p><h4><strong>Change Text Values</strong></h4></p>
+							<p>To change Text values in the application, select res -> values -> strings. From this file, you can change the string values. If you change the text here, the whole application text will be changed. </p>
+							<p><img alt="" src="assets/img/05.jpg" class="img-fluid"></p>
+							
+							<p><h4><strong>Change App Icons</strong></h4></p>
+							<p>You can change icons for the application. To change the icons, select <strong>res-> drawable -> Right click -> new -> Batch Drawable Importer</strong>. To change App Logo, default size is 512 x 512</p>
+							<p>If you don’t have that option, just follow the below steps. Click on <strong>File -> Settings -> Plugins -> Browse Repositories -> search Android Drawable importer -> Install plugin</strong>. View the images below for clear understanding.</p>
+							<p></p>
+
+							<h5><strong>Step 1</strong></h5>
+							<p><img alt="" src="assets/img/8.png" class="img-fluid"></p>
+
+							<h5><strong>Step 2</strong></h5>
+							<p></p>
+							<p><img alt="" src="assets/img/9.png" class="img-fluid"></p>
+							<p><img alt="" src="assets/img/10.png" class="img-fluid"></p>
+
+							<h5><strong>Step 3</strong></h5>
+							<p><img alt="" src="assets/img/11.png" class="img-fluid"></p>
+
+							<h5><strong>Step 4</strong></h5>
+							<p>Finally Android Drawable Importer Plugin is installed in android studio. Now click res -> drawable -> New -> Batch Drawable Import.</p>
+							<p><img alt="" src="assets/img/12.png" class="img-fluid"></p>
+							<p>Click add button. New tab will be opened and select image from the directory. And click OK.</p>
+							<p><img alt="" src="assets/img/14.png" class="img-fluid"></p>
+
+							<p>In this page you can set Icon name and Target resolution. Based on the image, height and width will be set.</p>
+							<p><img alt="" src="assets/img/15.png" class="img-fluid"></p>
+							<p>After adding new icon in to the drawable folder, if you wish to change logo for the app you can change it in manifest.xml file.</p>
+							<p><img alt="" src="assets/img/16.png" class="img-fluid"></p>
+
+							<hr class="hr-dash my-7">
+
+							<h3 id="requirements">System Requirements</h3>
+							<p>To run the product, You need the followings</p>
+							<table class="table table-bordered">
+								<tr>
+									<td><strong>Operating Systems</strong></td>
+									<td> Windows, Mac, Linux</td>
+								</tr>
+								<tr>
+									<td><strong>Software</strong></td>
+									<td>Android Studio(Latest Version), Firebase Account, Sinch Account</td>
+								</tr>
+										<tr>
+									<td><strong>Browser</strong></td>
+									<td>Chrome, Firefox, Internet Explorer, etc</td>
+								</tr>
+							</table> 
+							
+							<p><h4><strong> Prepare to Deploy</strong></h4></p>
+							<p>To deploy your app to Google Play you need to compile it to .apk file and sign. More details about sign process you can find here:</p>
+							<p><a href="https://developer.android.com/studio/publish/index.html" target="_blank">https://developer.android.com/studio/publish/index.html</p>
+							<hr class="hr-dash my-7">
+
+							<h3 id="change_log">Change log</h3>
+							<h5>Version 1.0 (09 Feb 2019)</h5>
+<pre>- Initial release version
+</pre>
+							
+							<h5>Version 1.2 (11 Nov 2019)</h5>
+<pre>- Added - Status
+- Added - Status Reply
+- Added - Swipe Chat Reply Single and Group Chat
+- Added - Message Read or Unread Option
+- Added - Video Call and Audio Call action icon
+- Added - Message type icon added in Chat
+- Added - Chat Background Wallpaper
+- Added - Last Seen
+- Fixed - Profile Image crash issue
+- Fixed - Video Upload crash issue
+- Fixed - Video Upload restricted 16MB
+- Fixed - UI Design issues fixed
+- Fixed - Audio Record crash issues fixed
+</pre>
+
+							<hr class="hr-dash">
+
+							<h3 id="support">Support</h3>
+							<p>You get full life-time support with this item. If you need some help or found a bug or issue with the template, You can always contact us at here via email and we will respond to you within 1 day.</p>
+							<p>If you have any queries please <a href="www.dreamguys.co.in/contact">contact us</a> through email: <strong><a href="mailto:admin@dreamguys.co.in">admin@dreamguys.co.in</a></strong></p>
+							<hr class="hr-dash">
+						</div>
+
+						</div>
+						</div>
+					</main>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer class="footer text-center">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-auto mr-auto">
+							<nav class="nav justify-content-center justify-content-lg-start">
+								<a class="nav-link" href="#home">Home</a>
+							</nav>
+						</div>
+
+						<div class="col-lg-auto">
+							&copy; <a href="https://dreamguys.co.in/">Dreamguys</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
